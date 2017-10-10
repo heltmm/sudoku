@@ -19,17 +19,7 @@ $(document).ready(function() {
   $('.card-body').click(function(event) {
     // event.preventDefault();
     // Get the body_id and use it to retrieve the value from the form
-    let body_id = $(event.currentTarget).attr('id');
-    let input_value = parseInt($(`#input${body_id}`).val());
-    // Execute some function to check for valid input
-    if(game.rowValidator(input_value,0,4)){
-      $(event.currentTarget).parents(".card").addClass("bg-success");
-      alert("goof move");
-      game.board[4][0] = input_value;
-    } else {
-      alert("bad move");
-      $(event.currentTarget).parents(".card").addClass("bg-danger");
-    }
+
   });
 
 });
